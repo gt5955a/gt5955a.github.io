@@ -36,6 +36,16 @@
 
 // Work listing
 .work {
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+    
   h2 {
     text-align: center;
   }
@@ -43,11 +53,12 @@
   background-size: $feature-image-size;
   border-bottom: 1px solid $border-color;
   li {
-    width: 32%;
-    margin-right:0.5%;
-    margin-left:0.5%;
+    width: 30%;
+    margin-right:1.5%;
+    margin-left:1.5%;
     margin-bottom: 0;
-    display: inline-block;
+    float: left;
+    list-style: none;
     p a:hover {
       @extend %link-hover;
     }
